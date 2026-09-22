@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academias da Cidade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🏋️ Academias da Cidade</h1>
+    <p>Cadastre e explore as academias disponíveis</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2 id="form-titulo">Cadastrar Academia</h2>
+      <form id="academia-form">
+        <input type="hidden" id="academia-id" />
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required placeholder="Ex: Academia PowerFit" />
+
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" required placeholder="Ex: Rua das Flores, 123" />
+
+        <label for="precoMensalidade">Preço da mensalidade (R$)</label>
+        <input type="number" id="precoMensalidade" min="0" step="0.01" required placeholder="Ex: 99.90" />
+
+        <label for="foto">URL da foto</label>
+        <input type="url" id="foto" placeholder="https://exemplo.com/foto.jpg" />
+
+        <div class="form-actions">
+          <button type="submit" id="btn-salvar">Salvar</button>
+          <button type="button" id="btn-cancelar" class="secundario" hidden>Cancelar edição</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="lista-section">
+      <h2>Academias cadastradas</h2>
+      <div id="mensagem" class="mensagem" hidden></div>
+      <div id="lista-academias" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
